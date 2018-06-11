@@ -28,12 +28,12 @@ this npm package is build for bootstrap 4 scss
 |   - yarn.lock
 
 ```
-##Install
+## Install
 all You need to do is to run one ot these commands in your terminal in the project root 
 * Using NPM `npm i bootstrap-multi-direction -save`
 * Using Yarn `yarn add bootstrap-multi-direction`
 
-##Usage
+## Usage
 
 ### IF you need to use the hole file
 Use any of these two files with LTR direction sites 
