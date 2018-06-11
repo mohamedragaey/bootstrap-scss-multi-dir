@@ -1,37 +1,103 @@
-## Welcome to GitHub Pages
+## Welcome to Bootstrap multi direction
 
-You can use the [editor on GitHub](https://github.com/mohamedragaey/bootstrap-scss-multi-dir/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+this npm package is build for bootstrap 4 scss
+## File Structure of the package
+```
+| bootstrap-multi-direction
+|   - dist/
+|       - css/
+|           -bootstrap.css
+|           -bootstrap.min.css
+|           -bootstrap.min.css.map
+|           -bootstrap-rtl.css
+|           -bootstrap-rtl.min.css.map
+|   - scss/
+|       - mixins/
+|       - utilities/
+|       - ...
+|       - ...
+|       - bootstrap.scss
+|       - bootstrap-rtl.scss
+|   - gulpfile.js
+|   - .gitignore
+|   - _config.yml
+|   - gulpfile.js
+|   - LICENSE
+|   - package.json
+|   - README.md
+|   - yarn.lock
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+```
+##Install
+all You need to do is to run one ot these commands in your terminal in the project root 
+* Using NPM `npm i bootstrap-multi-direction -save`
+* Using Yarn `yarn add bootstrap-multi-direction`
 
-### Markdown
+##Usage
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### IF you need to use the hole file
+Use any of these two files with LTR direction sites 
+* un-minified version 
+`@import '~bootstrap-multi-direction/dist/bootstrap.css'`
+* minified version
+`@import '~bootstrap-multi-direction/dist/bootstrap.min.css'`
 
-```markdown
-Syntax highlighted code block
+Use any of these two files with RTL direction sites
 
-# Header 1
-## Header 2
-### Header 3
+* un-minified version 
+`@import '~bootstrap-multi-direction/dist/bootstrap-rtl.css'`
+* minified version
+`@import '~bootstrap-multi-direction/dist/bootstrap-rtl.min.css'`
 
-- Bulleted
-- List
+### IF you need to use only some components
+all you have to do is just import the component in your style.scss
 
-1. Numbered
-2. List
+style.scss
 
-**Bold** and _Italic_ and `Code` text
+```scss
+@import '~bootstrap-multi-direction/scss/alert.scss'
 
-[Link](url) and ![Image](src)
+@import '~bootstrap-multi-direction/scss/card.scss'
+
+@import '~bootstrap-multi-direction/scss/grid.scss'
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+if you need to make an rtl file just in your 
 
-### Jekyll Themes
+style-rtl.scss
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mohamedragaey/bootstrap-scss-multi-dir/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```css
+$direction:rtl;
+@import 'style.scss';
+```
 
-### Support or Contact
+ 
+### IF you need to use the same dir variable as bootstrap uses 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* Example 
+```css
+div{
+float: $default;
+} 
+//this will be in LTR 
+div{
+float: left;
+} 
+//this will be in RTL
+div{
+float: right;
+} 
+```
+```css
+div{
+float: $opposite;
+} 
+//this will be in LTR 
+div{
+float: right;
+} 
+//this will be in RTL
+div{
+float: left;
+} 
+```
