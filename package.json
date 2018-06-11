@@ -1,6 +1,6 @@
 {
   "name": "boostrap-multi-direction",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "boostrap-multi-direction",
   "scripts": {
     "build": "NODE_ENV=production webpack --hide-modules",
