@@ -13,7 +13,7 @@ var config = {
     publicRootDir: './dist'
   },
   srcs = {
-    scss: './core',
+    scss: './scss',
     js: './js'
   }, dests = {
     css: config.publicRootDir + '/css',
@@ -29,8 +29,8 @@ gulp.task('browser-sync', ['css'], function () {
 
 gulp.task('css', function () {
   return gulp.src([
-    srcs.scss + '/app-rtl.scss', // Use it with LTR/RTL styles
-    srcs.scss + '/app.scss'
+    srcs.scss + '/bootstrap-rtl.scss', // Use it with LTR/RTL styles
+    srcs.scss + '/bootstrap.scss'
   ])
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sass({
