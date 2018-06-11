@@ -1,6 +1,6 @@
 {
   "name": "boostrap-multi-direction",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/bootstrap.css",
   "repository": {
     "type": "git",
