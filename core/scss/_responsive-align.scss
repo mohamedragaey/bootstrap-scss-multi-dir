@@ -1,0 +1,25 @@
+.text-left { text-align: $left; }
+.text-right { text-align: $right; }
+.pull-left {
+    @include pull-left();
+}
+.pull-right {
+    @include pull-right();
+}
+@each $breakpoint in map-keys($breakpoints) {
+    @include bp($breakpoint) {
+        .text-#{$breakpoint}-left   { text-align: $left !important; }
+        .text-#{$breakpoint}-right  { text-align: $right !important; }
+        .text-#{$breakpoint}-center { text-align: center !important; }
+        .text-#{$breakpoint}-justify { text-align: justify !important; }
+        .pull-#{$breakpoint}-left {
+            @include pull-left();
+        }
+        .pull-#{$breakpoint}-right {
+            @include pull-right();
+        }
+        .pull-#{$breakpoint}-none {
+            float: none !important;
+        }
+    }
+}

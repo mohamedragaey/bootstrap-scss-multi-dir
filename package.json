@@ -1,0 +1,26 @@
+{
+  "name": "boostrap-multi-direction",
+  "version": "1.0.0",
+  "main": "core/scss/bootstrap.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamedragaey/bootstrap-scss-multi-dir.git"
+  },
+  "author": "Mohamed Ragaey <mohamedragaey33@gmail.com>",
+  "license": "MIT",
+  "description": "Bootstrap scss version 4 multi direction support both RTL-LTR directions.",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-standard": "^10.1.2",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5"
+  }
+}

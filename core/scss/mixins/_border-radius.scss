@@ -1,0 +1,35 @@
+// Single side border-radius
+
+@mixin border-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+}
+
+@mixin border-top-radius($radius) {
+  @if $enable-rounded {
+    border-top-#{$default}-radius: $radius;
+    border-top-#{$opposite}-radius: $radius;
+  }
+}
+
+@mixin border-right-radius($radius) {
+  @if $enable-rounded {
+    border-top-#{$opposite}-radius: $radius;
+    border-bottom-#{$opposite}-radius: $radius;
+  }
+}
+
+@mixin border-bottom-radius($radius) {
+  @if $enable-rounded {
+    border-bottom-#{$opposite}-radius: $radius;
+    border-bottom-#{$default}-radius: $radius;
+  }
+}
+
+@mixin border-left-radius($radius) {
+  @if $enable-rounded {
+    border-top-#{$default}-radius: $radius;
+    border-bottom-#{$default}-radius: $radius;
+  }
+}
